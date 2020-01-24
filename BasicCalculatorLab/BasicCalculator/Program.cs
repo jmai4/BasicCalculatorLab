@@ -6,19 +6,28 @@ namespace BasicCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("*** BASIC CALCULATOR ***");
+            Console.WriteLine("==Jefferson's Awesome Weather Calculator"); //Displays some text
 
-            Console.WriteLine("Enter the first number");
+            Console.WriteLine("Enter temperature in degrees fahrenheit"); //Displays some text
 
-            // int.Parse will take a string data type and convert it to an int data type
-            int firstNumber = int.Parse(Console.ReadLine());
+            int Temperature = int.Parse(Console.ReadLine()); //Takes user's input integer for temperature
 
-            Console.WriteLine("Enter the second number");
-            int secondNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter relative humidity"); //Displays some text
 
-            int sum = firstNumber + secondNumber;
+            int RelativeHumidity = int.Parse(Console.ReadLine()); //Takes user's input integer for relative humidity
 
-            Console.WriteLine("The answer is " + sum);
+            double DewPoint = Temperature - (9 * (100 - RelativeHumidity)) / 25; //Calculates DewPoint
+
+            Console.WriteLine("The Dew Point is" + DewPoint); //Displays some text for Dew Point
+
+            Console.WriteLine("Enter the wind speed (mph)"); //Displays some text
+
+            double Windspeed = double.Parse(Console.ReadLine()); //Takes users's integer for wind speed
+
+            double WindChill = 35.74 + (0.6215 * Temperature) - (35.75 * Math.Pow(Windspeed, 0.16)) + (0.4275 * Temperature * Math.Pow(Windspeed, 0.16));
+
+            Console.WriteLine("The Wind Chill is" + WindChill); //Displays the final wind chill
+          
         }
     }
 }
