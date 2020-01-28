@@ -6,7 +6,7 @@ namespace BasicCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("==Jefferson's Awesome Weather Calculator"); //Displays some text
+            Console.WriteLine("Jefferson's Awesome Weather Calculator"); //Displays some text
 
             Console.WriteLine("Enter temperature in degrees fahrenheit"); //Displays some text
 
