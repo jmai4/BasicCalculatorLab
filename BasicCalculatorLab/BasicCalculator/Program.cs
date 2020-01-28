@@ -24,7 +24,8 @@ namespace BasicCalculator
 
             double Windspeed = double.Parse(Console.ReadLine()); //Takes users's integer for wind speed
 
-            double WindChill = 35.74 + (0.6215 * Temperature) - (35.75 * Math.Pow(Windspeed, 0.16)) + (0.4275 * Temperature * Math.Pow(Windspeed, 0.16));
+            double WindChill = 35.74 + (0.6215 * Temperature) - (35.75 * Math.Pow(Windspeed, 0.16)) + 
+                (0.4275 * Temperature * Math.Pow(Windspeed, 0.16)); //Calculates Windchill 
 
             Console.WriteLine("The Wind Chill is" + WindChill); //Displays the final wind chill
           
